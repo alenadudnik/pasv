@@ -12,7 +12,6 @@ describe('Auth', () => {
     });
 
     it('wrong credentials throws error', async () => {
-
         await LoginPage.login('invalid@exapmle.com', 'invalid');
         await expect(LoginPage.notification).toHaveTextContaining('Auth failed');
     });
